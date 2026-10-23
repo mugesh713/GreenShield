@@ -65,7 +65,7 @@ if app_mode == "HOME":
     st.markdown(
     """
     <div style="text-align: center; margin-top: 50px; font-size: 14px; color: #666;">
-        Developed by <b><a href="https://agrisens.netlify.app/" target="_blank" style="color: #666; text-decoration: none;">Team AgriSens</a></b> | Powered by Streamlit
+        Developed by <b><a href="https://legendary-bombolone-0b3cd2.netlify.app/" target="_blank" style="color: #666; text-decoration: none;">Team AgriSens</a></b> | Powered by Streamlit
     </div>
     """,
     unsafe_allow_html=True,
