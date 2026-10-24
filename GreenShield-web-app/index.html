@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="GreenShield gives farmers practical tools for healthier crops and better decisions." />
     <title>GreenShield | Smart farming, made practical</title>
+    <script>
+      if (localStorage.getItem("greenshield_session") !== "true") {
+        window.location.replace("auth/login.html");
+      }
+    </script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   </head>
@@ -18,7 +23,11 @@
         <a href="#home">Home</a>
         <a href="#features">Tools</a>
         <a href="#how-it-works">How it works</a>
-        <a href="explore/index.html" class="nav-cta">Explore now <i class="fas fa-arrow-right"></i></a>
+        <span class="auth-nav" id="auth-nav">
+          <a href="auth/login.html">Log in</a>
+          <a href="auth/signup.html" class="nav-cta">Sign up <i class="fas fa-arrow-right"></i></a>
+        </span>
+        <a href="explore/index.html" class="nav-cta nav-cta-secondary">Explore now <i class="fas fa-arrow-right"></i></a>
       </nav>
       <button class="menu-toggle fas fa-bars" id="menu-btn" aria-label="Open menu"></button>
     </header>
@@ -53,11 +62,11 @@
           <p>From planning to plant care, start with the tool that matches what is happening in your field right now.</p>
         </div>
         <div class="tool-grid">
-          <a class="tool-card tool-card-large" href="https://crop-recomm.streamlit.app/"><img src="images/crop-planning.jpg" alt="Smart crop planning on a phone" /><span class="card-overlay"></span><span class="card-content"><small>01 / PLAN</small><strong>Find the right crop</strong><span>Get a recommendation based on your soil and climate.</span><b>Open crop planner <i class="fas fa-external-link-alt"></i></b></span></a>
-          <a class="tool-card" href="weather-forecast/index.html"><img src="images/modern-farm.jpg" alt="Modern green farm" /><span class="card-content"><i class="fas fa-cloud-sun card-icon"></i><small>02 / CHECK</small><strong>Today’s weather</strong><span>See the conditions before you step into the field.</span><b>View forecast <i class="fas fa-arrow-right"></i></b></span></a>
-          <a class="tool-card" href="https://agrisens-crop-disease-pred.streamlit.app/"><img src="images/desease-dect.jpeg" alt="Plant disease identification" /><span class="card-content"><i class="fas fa-microscope card-icon"></i><small>03 / PROTECT</small><strong>Identify plant disease</strong><span>Use image analysis to spot problems early.</span><b>Check a plant <i class="fas fa-arrow-right"></i></b></span></a>
-          <a class="tool-card" href="https://agrisens-fertilizer-recommendations.streamlit.app/"><img src="images/User-Friendly.jpeg" alt="Farmer using a digital tool" /><span class="card-content"><i class="fas fa-flask card-icon"></i><small>04 / NOURISH</small><strong>Get fertilizer advice</strong><span>Choose inputs that support healthier growth.</span><b>Get recommendation <i class="fas fa-arrow-right"></i></b></span></a>
-          <a class="tool-card tool-card-guide" href="guide/index.html"><img src="images/guide.png" alt="Smart farming guidance" /><span class="card-content"><i class="fas fa-book-open card-icon"></i><small>05 / LEARN</small><strong>Follow the smart guide</strong><span>Simple steps for planting, care, and harvest.</span><b>Open guide <i class="fas fa-arrow-right"></i></b></span></a>
+          <a class="tool-card tool-card-large" href="https://crop-recomm.streamlit.app/"><img src="images/farming3.jpg" alt="Real crop fields and farmland" /><span class="card-overlay"></span><span class="card-content"><small>01 / PLAN</small><strong>Find the right crop</strong><span>Get a recommendation based on your soil and climate.</span><b>Open crop planner <i class="fas fa-external-link-alt"></i></b></span></a>
+          <a class="tool-card" href="weather-forecast/index.html"><img src="images/farming2.jpg" alt="Storm clouds over farmland" /><span class="card-content"><i class="fas fa-cloud-sun card-icon"></i><small>02 / CHECK</small><strong>Today’s weather</strong><span>See the conditions before you step into the field.</span><b>View forecast <i class="fas fa-arrow-right"></i></b></span></a>
+          <a class="tool-card" href="https://agrisens-crop-disease-pred.streamlit.app/"><img src="images/farming.jpg" alt="Farmer working in a rice field" /><span class="card-content"><i class="fas fa-microscope card-icon"></i><small>03 / PROTECT</small><strong>Identify plant disease</strong><span>Use image analysis to spot problems early.</span><b>Check a plant <i class="fas fa-arrow-right"></i></b></span></a>
+          <a class="tool-card" href="https://agrisens-fertilizer-recommendations.streamlit.app/"><img src="images/amit-front2.jpg" alt="Farmer planting rice seedlings" /><span class="card-content"><i class="fas fa-flask card-icon"></i><small>04 / NOURISH</small><strong>Get fertilizer advice</strong><span>Choose inputs that support healthier growth.</span><b>Get recommendation <i class="fas fa-arrow-right"></i></b></span></a>
+          <a class="tool-card tool-card-guide" href="guide/index.html"><img src="images/farming4.jpg" alt="Farmland beneath changing weather" /><span class="card-content"><i class="fas fa-book-open card-icon"></i><small>05 / LEARN</small><strong>Follow the smart guide</strong><span>Simple steps for planting, care, and harvest.</span><b>Open guide <i class="fas fa-arrow-right"></i></b></span></a>
         </div>
       </section>
 

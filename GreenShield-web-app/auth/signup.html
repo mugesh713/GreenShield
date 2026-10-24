@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create a GreenShield account." />
+    <title>Sign up | GreenShield</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell">
+      <section class="auth-panel auth-intro">
+        <a class="brand" href="../index.html" aria-label="GreenShield home">
+          <span class="brand-mark"><i class="fas fa-leaf"></i></span>
+          <span>Green<span>Shield</span></span>
+        </a>
+        <div class="auth-intro-copy">
+          <p class="section-label">Start growing smarter</p>
+          <h1>Your next season starts with one good choice.</h1>
+          <p>Create a demo GreenShield account and keep your farming tools in one place.</p>
+        </div>
+        <p class="auth-note"><i class="fas fa-leaf"></i> Plan. Protect. Grow.</p>
+      </section>
+
+      <section class="auth-panel auth-form-panel">
+        <a class="mobile-brand brand" href="../index.html" aria-label="GreenShield home">
+          <span class="brand-mark"><i class="fas fa-leaf"></i></span>
+          <span>Green<span>Shield</span></span>
+        </a>
+        <div class="form-heading">
+          <p class="section-label">Create your account</p>
+          <h2>Join GreenShield</h2>
+          <p>This is a front-end demo. No information is stored.</p>
+        </div>
+        <form class="auth-form" data-auth-form="signup">
+          <label for="signup-name">Full name</label>
+          <input id="signup-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+          <label for="signup-email">Email address</label>
+          <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+          <label for="signup-password">Password</label>
+          <span class="password-field">
+            <input id="signup-password" name="password" type="password" autocomplete="new-password" placeholder="At least 6 characters" minlength="6" required />
+            <button class="password-toggle" type="button" data-password-toggle="signup-password" aria-label="Show password"><i class="fas fa-eye"></i></button>
+          </span>
+          <label for="signup-confirm-password">Confirm password</label>
+          <span class="password-field">
+            <input id="signup-confirm-password" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Repeat your password" minlength="6" required />
+            <button class="password-toggle" type="button" data-password-toggle="signup-confirm-password" aria-label="Show password"><i class="fas fa-eye"></i></button>
+          </span>
+          <button class="primary-button" type="submit">Create account <i class="fas fa-arrow-right"></i></button>
+          <p class="form-message" role="status" aria-live="polite"></p>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+        <a class="back-link" href="../index.html"><i class="fas fa-arrow-left"></i> Back to home</a>
+      </section>
+    </main>
+    <script src="auth.js"></script>
+  </body>
+</html>

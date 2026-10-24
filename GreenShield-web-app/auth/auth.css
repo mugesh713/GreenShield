@@ -1,0 +1,214 @@
+.auth-page {
+  background:
+    linear-gradient(135deg, rgba(29, 48, 40, 0.94), rgba(63, 125, 88, 0.86)),
+    url("../images/farming3.jpg") center / cover;
+  min-height: 100vh;
+  padding: 4rem;
+}
+
+.auth-shell {
+  background: var(--paper);
+  border-radius: 2rem;
+  box-shadow: 0 2rem 6rem rgba(16, 39, 31, 0.26);
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(32rem, 1.1fr);
+  margin: auto;
+  max-width: 110rem;
+  min-height: min(72rem, calc(100vh - 8rem));
+  overflow: hidden;
+}
+
+.auth-panel {
+  padding: 5rem clamp(3rem, 6vw, 8rem);
+}
+
+.auth-intro {
+  background:
+    linear-gradient(155deg, rgba(29, 48, 40, 0.9), rgba(29, 48, 40, 0.64)),
+    url("../images/amit-front1.jpg") center / cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-intro .brand {
+  color: #fff;
+}
+
+.auth-intro .brand > span:last-child > span,
+.mobile-brand > span:last-child > span {
+  color: var(--lime);
+}
+
+.auth-intro-copy {
+  margin: auto 0;
+  max-width: 43rem;
+}
+
+.auth-intro-copy h1 {
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(3.6rem, 5vw, 6rem);
+  letter-spacing: -0.06em;
+  line-height: 1;
+  margin: 1.8rem 0;
+  text-transform: none;
+}
+
+.auth-intro-copy > p:last-child {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.auth-note {
+  color: var(--lime);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.auth-note i {
+  margin-right: 0.8rem;
+}
+
+.auth-form-panel {
+  align-self: center;
+  max-width: 58rem;
+  width: 100%;
+}
+
+.mobile-brand {
+  display: none;
+}
+
+.form-heading h2 {
+  color: var(--ink);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(3rem, 4vw, 4.6rem);
+  letter-spacing: -0.06em;
+  line-height: 1;
+  margin: 1.5rem 0 1rem;
+  text-transform: none;
+}
+
+.form-heading > p:last-child {
+  color: var(--muted);
+  font-size: 1.4rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.2rem;
+}
+
+.auth-form label {
+  color: var(--ink);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.auth-form input {
+  background: #f5f6ef;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  color: var(--ink);
+  font-size: 1.4rem;
+  margin-bottom: 1.8rem;
+  padding: 1.4rem 1.5rem;
+  text-transform: none;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 4.5rem;
+  width: 100%;
+}
+
+.password-toggle {
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.7rem;
+}
+
+.password-toggle:hover {
+  color: var(--clay);
+}
+
+.auth-form input:focus {
+  border-color: var(--leaf);
+  box-shadow: 0 0 0 0.3rem rgba(63, 125, 88, 0.12);
+}
+
+.auth-form .primary-button {
+  border: 0;
+  cursor: pointer;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+.form-message {
+  color: var(--leaf);
+  font-size: 1.3rem;
+  min-height: 2rem;
+  padding-top: 1.2rem;
+}
+
+.auth-switch,
+.back-link {
+  font-size: 1.3rem;
+}
+
+.auth-switch {
+  color: var(--muted);
+  margin-top: 2.4rem;
+}
+
+.auth-switch a,
+.back-link {
+  color: var(--clay);
+  font-weight: 700;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 3rem;
+}
+
+.back-link i {
+  margin-right: 0.6rem;
+}
+
+@media (max-width: 800px) {
+  .auth-page {
+    padding: 2rem;
+  }
+
+  .auth-shell {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .auth-intro {
+    display: none;
+  }
+
+  .auth-form-panel {
+    padding: 4rem clamp(2.4rem, 7vw, 5rem);
+  }
+
+  .mobile-brand {
+    align-items: center;
+    display: inline-flex;
+    margin-bottom: 5rem;
+  }
+}
